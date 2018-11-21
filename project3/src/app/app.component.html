@@ -1,16 +1,24 @@
-<nav class="navbar navbar-dark bg-dark">
+
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">Auth0 - Angular</a>
+      <!-- <a class="navbar-brand" href="#">Auth0 - Angular</a> -->
       <form class="form-inline">
-        <button class="btn btn-primary my-2 my-sm-0 mr-2"
-          routerLink="/" type="button">
+        <button class="btn btn-primary btn-lg"
+          routerLink="/" type="button"> 
             Home
         </button>
+
+        <button class="btn btn-primary btn-lg"
+        routerLink="/" type="button"> 
+          Ask question
+      </button>
 
         <button id="qsLoginBtn"
           class="btn btn-primary my-2 my-sm-0"
           *ngIf="!auth.isAuthenticated()"
-          (click)="auth.login()" type="button">
+          (click)="auth.login()"class="btn btn-primary btn-lg pull-right"> 
+          
             Log In
         </button>
 
@@ -24,7 +32,8 @@
       </form>
   </div>
 </nav>
-
+<app-ask-question></app-ask-question>
 <main role="main" class="container">
   <router-outlet></router-outlet>
+ 
 </main>
