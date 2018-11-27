@@ -11,12 +11,16 @@ import { ROUTES } from './app.routes';
 
 import { AuthService } from './auth/auth.service';
 import { CallbackComponent } from './callback/callback.component';
+	
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AskQuestionComponent } from './ask-question/ask-question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CallbackComponent
+    CallbackComponent,
+    AskQuestionComponent
   ],
   imports: [
     BrowserModule,
