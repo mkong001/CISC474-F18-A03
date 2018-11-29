@@ -14,6 +14,7 @@ import { CallbackComponent } from './callback/callback.component';
 	
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AskQuestionComponent } from './ask-question/ask-question.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AskQuestionComponent } from './ask-question/ask-question.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
