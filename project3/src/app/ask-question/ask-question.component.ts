@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from './../auth/auth.service';
 
 @Component({
   selector: 'app-ask-question',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AskQuestionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) { }
 
   ngOnInit() {
   }

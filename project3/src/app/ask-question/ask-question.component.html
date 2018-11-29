@@ -1,7 +1,7 @@
+<h4 *ngIf="auth.isAuthenticated()">
 <form>
-  
   <div class="form-group">
-    <label for="exampleInputPassword1">Tittle</label>
+    <label for="exampleInputPassword1">Title</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Title">
   </div>
   <div class="form-group">
@@ -27,3 +27,7 @@
   
   <button type="submit" class="btn btn-primary center-block">Post Question</button>
 </form>
+</h4>
+<h4 *ngIf="!auth.isAuthenticated()">
+    You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
+  </h4>
