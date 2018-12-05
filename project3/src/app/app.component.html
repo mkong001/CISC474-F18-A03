@@ -1,37 +1,31 @@
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-    <br>
-      <!-- <a class="navbar-brand" href="#">Auth0 - Angular</a> -->
-      <form class="form-inline">
-        <a routerLink="/">
-        <button class="btn btn-primary btn-sm-0"> 
-            Home
-        </button></a>
-        <a routerLink="/ask-question">
-        <button class="btn btn-primary btn-sm-0"> 
-          Ask question
-      </button></a>
-
-        <button id="qsLoginBtn"
-          class="btn btn-primary my-2 my-sm-0"
-          *ngIf="!auth.isAuthenticated()"
-          (click)="auth.login()"class="btn btn-primary btn-lg pull-right"> 
-          
-            Log In
+    <!-- <a class="navbar-brand" href="#"><Auth0 - Angular</a> -->
+    <div class="container inline-block">
+      <div class="btn-toolbar float-left" role="toolbar">
+        <button class="btn btn-primary btn-lg" routerLink="/" style="font-family: abel">
+          <b>Home</b>
         </button>
 
-        <button id="qsLogoutBtn"
-          class="btn btn-primary my-2 my-sm-0"
-          *ngIf="auth.isAuthenticated()"
-          (click)="auth.logout()" type="button">
-            Log Out
+        <button class="btn btn-primary btn-lg" routerLink="/ask-question" style="font-family: abel">
+          <b>Ask question</b>
+        </button>
+      </div>
+      <div class="float-right">
+        <button id="qsLoginBtn" *ngIf="!auth.isAuthenticated()" (click)="auth.login()" class="btn btn-primary my-2 btn-lg pull-right" 
+        style="font-family: abel">
+          <b>Log In</b>
         </button>
 
-      </form>
-      <br>
+        <button id="qsLogoutBtn" class="btn btn-primary my-2 my-lg pull-right" *ngIf="auth.isAuthenticated()"
+          (click)="auth.logout()" type="button" style="font-family: abel">
+          Log Out
+        </button>
+      </div>
+    </div>
   </div>
 </nav>
+
 <main role="main" class="container">
   <router-outlet></router-outlet>
- 
 </main>

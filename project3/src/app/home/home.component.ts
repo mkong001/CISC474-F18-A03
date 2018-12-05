@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './../auth/auth.service';
-import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service'
 
 @Component({
   selector: 'app-home',
@@ -8,10 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  questions: object;
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService, private data: DataService) { }
 
   ngOnInit() {
+    this.data.getQuestions().subscribe(data => this.questions = data)
   }
 
 }

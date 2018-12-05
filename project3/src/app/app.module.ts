@@ -12,9 +12,11 @@ import { ROUTES } from './app.routes';
 import { AuthService } from './auth/auth.service';
 import { CallbackComponent } from './callback/callback.component';
 	
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AskQuestionComponent } from './ask-question/ask-question.component';
 import { AppRoutingModule } from './/app-routing.module';
+
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AppRoutingModule } from './/app-routing.module';
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule 
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -4,3 +4,39 @@ a {
 .card {
     background-color:ghostwhite;
 }
+
+/* You can add global styles to this file, and also import other style files */
+h4 {
+    font-family: abel;
+    font-size: 22px;
+}
+h3 {
+    font-family: abel;
+    font-size:18px;
+    margin-left:10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+h2 {
+    font-family: abel;
+    font-size:18px;
+    margin-left:10px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+
+
+ul {
+    font-family: abel;
+    list-style-type: none;
+    margin:0;padding:0;
+}
+li {
+    color:darkgray;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.username {
+    color: lightskyblue;
+}

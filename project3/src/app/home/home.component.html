@@ -1,15 +1,21 @@
-<h4 *ngIf="auth.isAuthenticated()">
-  You are logged in!
-</h4>
-<h4 *ngIf="!auth.isAuthenticated()">
-  You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
-</h4>
 <!-- Search form -->
+<h4><b>Welcome to CISC Tutor</b></h4>
 <div class="active-cyan-4 mb-4">
   <input class="form-control" type="text" placeholder="Search Questions" aria-label="Search Questions">
 </div>
-<div class="card">
-  <div class="card-body">
-        lmao look im a card
+<div class="pb-2" *ngFor="let question of questions">
+  <div class="card">
+      <!--<img [src]="getDogImage(breed)" alt="">-->
+      <h2>Question:</h2>
+      <h3>{{ question.question }}</h3>
+      <ul>
+          <li><div class="username"><b><i>{{ question.username }}</i></b></div></li>
+          <li><i>{{ question.email }}</i></li>
+          <li><i>{{ question.date }}</i></li>
+        </ul>
+      
+      
+      
+      
   </div>
 </div>
