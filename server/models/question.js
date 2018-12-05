@@ -5,9 +5,18 @@ Schema = mongoose.Schema;
 const QuestionSchema = new Schema({  
     title: {
       type: String,
-      unique: true,
       required: true
-    }
+    },
+    subject: {
+      type: String,
+      required: true
+    },
+    details: String,
+    username: {
+      type: String,
+      required: true
+    },
+    answers: [String]
   },
   {
     timestamps: true
