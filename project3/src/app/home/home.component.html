@@ -6,16 +6,13 @@
 <div class="pb-2" *ngFor="let question of questions">
   <div class="card">
       <!--<img [src]="getDogImage(breed)" alt="">-->
-      <h2>Question:</h2>
+      <h2>Question Title</h2>
       <h3>{{ question.question }}</h3>
       <ul>
           <li><div class="username"><b><i>{{ question.username }}</i></b></div></li>
           <li><i>{{ question.email }}</i></li>
           <li><i>{{ question.date }}</i></li>
         </ul>
-      
-      
-      
       
   </div>
 </div>

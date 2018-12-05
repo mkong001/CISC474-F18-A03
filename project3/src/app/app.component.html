@@ -1,23 +1,24 @@
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-light" style="background-color: #4198d1
+;">
   <div class="container-fluid">
     <!-- <a class="navbar-brand" href="#"><Auth0 - Angular</a> -->
     <div class="container inline-block">
-      <div class="btn-toolbar float-left" role="toolbar">
-        <button class="btn btn-primary btn-lg" routerLink="/" style="font-family: abel">
+      <div class="float-left">
+        <button class="btn btn-primary my-2 btn-lg" routerLink="/" style="font-family: abel; margin-right:5px">
           <b>Home</b>
         </button>
 
-        <button class="btn btn-primary btn-lg" routerLink="/ask-question" style="font-family: abel">
-          <b>Ask question</b>
+        <button class="btn btn-primary my-2 btn-lg" routerLink="/ask-question" style="font-family: abel">
+          Ask question
         </button>
       </div>
       <div class="float-right">
         <button id="qsLoginBtn" *ngIf="!auth.isAuthenticated()" (click)="auth.login()" class="btn btn-primary my-2 btn-lg pull-right" 
         style="font-family: abel">
-          <b>Log In</b>
+          Log In
         </button>
 
-        <button id="qsLogoutBtn" class="btn btn-primary my-2 my-lg pull-right" *ngIf="auth.isAuthenticated()"
+        <button id="qsLogoutBtn" class="btn btn-primary my-2 btn-lg pull-right" *ngIf="auth.isAuthenticated()"
           (click)="auth.logout()" type="button" style="font-family: abel">
           Log Out
         </button>

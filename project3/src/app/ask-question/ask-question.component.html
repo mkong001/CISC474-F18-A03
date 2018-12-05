@@ -1,33 +1,29 @@
 <h4 *ngIf="auth.isAuthenticated()">
 <form>
   <div class="form-group">
-    <label for="exampleInputPassword1">Title</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Title">
+    <label for="titleinput">Question</label>
+    <input type="sumbit" class="form-control" id="titleinput" placeholder="Question">
   </div>
   <div class="form-group">
-    <label for="exampleSelect1">Choose a subject</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>Data Structure</option>
-      <option>Automata Theory</option>
-      <option>Java</option>
-      <option>Html</option>
-      <option>C++</option>
-    </select>
+      <label for="subjectinput">Subject</label>
+      <input type="sumbit" class="form-control" id="subjectinput" placeholder="Subject">
   </div>
   
   <div class="form-group">
-    <label for="exampleTextarea">Type your question here</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    <label for="questionDetailsTextArea">Question Details</label>
+    <textarea class="form-control" id="questionDetailsTextArea" rows="3"></textarea>
   </div>
+
   <div class="form-group">
     <label for="exampleInputFile">File input</label>
     <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-
   </div>
   
-  <button type="submit" class="btn btn-primary center-block">Post Question</button>
+  <button type="submit" class="btn btn-primary btn-lg center-block">Post Question</button>
 </form>
 </h4>
-<h4 *ngIf="!auth.isAuthenticated()">
-    You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
-  </h4>
+
+<div class="nologtext" *ngIf="!auth.isAuthenticated()">
+  <br>
+  You must be logged in to post a question.
+</div>
