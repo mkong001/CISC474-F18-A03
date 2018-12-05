@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --port 3000",
+  "ng": "ng",
+  "start": "ng serve --host 0.0.0.0 --port 3000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -52,4 +52,5 @@
     "tslint": "~5.7.0",
     "typescript": "2.6.2"
   }
+  
 }
